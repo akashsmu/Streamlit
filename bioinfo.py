@@ -13,11 +13,19 @@ This app counts the nucleotide composition of query DNA!
 """)
 
 st.header("Enter the DNA Sequence")
-sequence_input=">DNA Query \nGAAATCATCGCTATACACGTTGCATTATATTAGCGATCGGG\nCCCCAAGTGACTACCGATCTCGATCGACTACGATCGTACGG\nACTGACTACTACGTTTGCAGTTGCTCAGTGAGCAGTACTAT\nCTCTACTCACATTCT"
+#sequence_input=">DNA Query \nGAAATCATCGCTATACACGTTGCATTATATTAGCGATCGGG\nCCCCAAGTGACTACCGATCTCGATCGACTACGATCGTACGG\nACTGACTACTACGTTTGCAGTTGCTCAGTGAGCAGTACTAT\nCTCTACTCACATTCT"
 
 # sequence=st.sidebar.text_area('Sequence input",sequence_input,height=250)
-sequence=st.text_area("Sequence input",sequence_input,height=250)
+
+# This takes the input from the user.
+sequence=st.text_area("Sequence input",height=250)
+
+#This sets the default value
+# sequnence=st.text_area("Sequence input",sequence,'height=250)
+
+
 sequence=sequence.splitlines()
+sequence
 sequence=sequence[1:]
 sequence=''.join(sequence)
 
